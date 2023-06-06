@@ -1,24 +1,32 @@
-# app
+## Setup
 
-## Project setup
+1. git clone repository
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+$ git clone git@github.com:takato-noguchi/vue-todomvc.git
 ```
 
-### Compiles and minifies for production
+1. docker image build
+
 ```
-npm run build
+$ docker-compose build
 ```
 
-### Lints and fixes files
+2. docker cotainer up
 ```
-npm run lint
+$ docker-compose up -d 
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+3. enter the container
+```
+$ docker-compose exec client /bin/sh
+```
+
+4. set up server
+```
+$ npm run serve
+```
+
+5. access localhost
+```
+$ http://localhost:18080
+```
